@@ -44,14 +44,6 @@ class FormatCIDR():
         self.int_mask = [int(octet) for octet in user_data[4::]]
         self.str_mask = [octet for octet in user_data[4::]]
 
-        if self.int_ip[0] == 0:
-            raise Exception(
-                "The first octet of the IP must be different from 0.")
-
-        if self.int_mask[0] == 0:
-            raise Exception(
-                "The first octet of the Mask must be different from 0.")
-
         if len(self.int_ip) != 4 or len(self.int_mask) != 4:
             raise Exception("The number of octets is invalid.")
 

@@ -15,7 +15,7 @@ def formatting_network(user_input: str) -> str:
     'Format CIDR: 100.200.3.46/8'
 
     >>> formatting_network('0.2.3.4-255.255.255.0')
-    Error:  The first octet of the IP must be different from 0.
+    'Format CIDR: 0.2.3.4/24'
 
     >>> formatting_network('1.2.3.4-255.0.255.0')
     Error:  The mask does not comply with the format.
